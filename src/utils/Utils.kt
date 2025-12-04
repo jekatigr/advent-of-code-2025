@@ -1,5 +1,8 @@
 package utils
 
+typealias Point = Pair<Int, Int>
+typealias Points = List<Point>
+
 /**
  * Creates String id by coordinates
  */
