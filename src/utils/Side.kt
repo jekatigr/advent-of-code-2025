@@ -41,6 +41,10 @@ enum class Side {
             DOWN_RIGHT -> Pair(i + 1, j + 1)
         }
     }
+    /**
+     * Returns next coordinates from the current ones based on direction
+     */
+    fun from(point: Point): Pair<Int, Int> = from(point.first, point.second)
 
     companion object {
         fun from(char: Char): Side {

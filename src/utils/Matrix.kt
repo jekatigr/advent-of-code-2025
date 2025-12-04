@@ -68,6 +68,12 @@ class Matrix<T>(private val cells: Array<Array<T>>) {
     fun getNeighbours(i: Int, j: Int): Array<Point> {
         return getOrthogonalNeighbours(i, j) + getDiagonalDirections(i, j)
     }
+    fun getNeighbours(point: Point) = getNeighbours(point.first, point.second)
+
+    fun height() = cells.size
+    fun heightRange() = IntRange(0, cells.size - 1)
+    fun width() = cells[0].size
+    fun widthRange() = IntRange(0, cells[0].size - 1)
 
     /**
      * Get cell value by coordinates.
