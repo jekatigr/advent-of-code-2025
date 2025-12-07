@@ -94,6 +94,12 @@ class Matrix<T>(private val cells: Array<Array<T>>) {
     fun set(value: T, point: Point) {
         cells[point.first][point.second] = value
     }
+    /**
+     * Set cell value by coordinates.
+     */
+    fun set(value: T, i: Int, j: Int) {
+        cells[i][j] = value
+    }
 
     /**
      * Pretty prints matrix with some visited nodes marked. Visited set is a set with id's.
