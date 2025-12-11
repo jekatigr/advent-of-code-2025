@@ -113,10 +113,12 @@ class Matrix<T>(private val cells: Array<Array<T>>) {
             for ((j, c) in line.withIndex()) {
                 val id = getIdByXY(index, j)
 
+                val str = c?.toString() ?: " "
+
                 if (visited?.contains(id) == true ) {
-                    kotlin.io.print("$brightGreenBg$blackColor$c$reset$separator")
+                    kotlin.io.print("$brightGreenBg$blackColor$str$reset$separator")
                 } else {
-                    kotlin.io.print("$c$separator")
+                    kotlin.io.print("$str$separator")
                 }
             }
             println()
